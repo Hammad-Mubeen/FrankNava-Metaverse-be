@@ -17,7 +17,7 @@ import { MiddlewareModule } from './middleware/middleware.module';
     }),
     GraphQLModule.forRoot({
       driver: ApolloDriver,
-      autoSchemaFile: 'schema.gql',
+      autoSchemaFile: true,
       context: ({ req }) => ({ headers: req.headers }),
     }),
     MongooseModule.forRoot(process.env.MONGO_DB_ONLINE_URL),
